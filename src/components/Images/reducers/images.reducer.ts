@@ -16,12 +16,12 @@ export const imagesReducer = (state: ImagesState, action: ImagesActions) => {
     case ImagesTypes.AddFavorite:
       return {
         ...state,
-        favorites: state.favorites.concat(...[action.payload.id]), // Get from local storage,
+        favorites: state.favorites.concat(...[action.payload.id]),
       };
     case ImagesTypes.RemoveFavorite:
       return {
         ...state,
-        favorites: state.favorites.filter((item) => item !== action.payload.id), // local storage
+        favorites: state.favorites.filter((item) => item !== action.payload.id),
       };
     default:
       return state;

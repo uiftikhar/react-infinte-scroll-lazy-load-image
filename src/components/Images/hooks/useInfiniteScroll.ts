@@ -1,9 +1,8 @@
 import { useCallback, useEffect } from 'react';
 
-import { PagerTypes } from '../components/Images/enums';
-import { PagerActions } from '../components/Images/types';
+import { PagerTypes } from '../enums';
+import { PagerActions } from '../types';
 
-// infinite scrolling with intersection observer
 export const useInfiniteScroll = (
   scrollRef: { current: unknown },
   dispatch: (arg0: PagerActions) => void,

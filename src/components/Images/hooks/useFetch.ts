@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 
-import { ImagesTypes } from '../components/Images/enums';
-import { ImagesActions } from '../components/Images/types';
+import { ImagesTypes } from '../enums';
+import { ImagesActions } from '../types';
 
 // TODO: Put it in ENV
 // APIKEY: 85ee567e29e6c9a0a2ecba3404d97d8b
-// make API calls and pass the returned data via dispatch
+// convert to async await
 export const useFetch = (
   data: { page: number },
   dispatch: (arg0: ImagesActions) => void,

@@ -19,17 +19,17 @@ export const FavoriteButton: React.FC<FavoriteButtonProps> = ({
     >
       <button
         type="button"
-        className={`${FavoriteButtonStyles.default['like-button']} ${
+        className={`${FavoriteButtonStyles.default['favorite-button']} ${
           isFavorite ? FavoriteButtonStyles.default['is-active'] : null
         }`}
       >
         <i
-          className={`${FavoriteButtonStyles.default.favorite_border} ${FavoriteButtonStyles.default['not-liked']} ${FavoriteButtonStyles.default.bouncy}`}
+          className={`${FavoriteButtonStyles.default['favorite-border']} ${FavoriteButtonStyles.default['not-favorite']} ${FavoriteButtonStyles.default.bouncy}`}
         />
         <i
-          className={`${FavoriteButtonStyles.default.favorite_full} ${FavoriteButtonStyles.default['is-liked']} ${FavoriteButtonStyles.default.bouncy}`}
+          className={`${FavoriteButtonStyles.default['favorite-full']} ${FavoriteButtonStyles.default['is-favorite']} ${FavoriteButtonStyles.default.bouncy}`}
         />
-        <span className={FavoriteButtonStyles.default['like-overlay']} />
+        <span className={FavoriteButtonStyles.default['favorite-overlay']} />
       </button>
       <p>Favourite</p>
     </div>

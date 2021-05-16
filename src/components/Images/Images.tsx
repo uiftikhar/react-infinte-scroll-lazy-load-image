@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useRef } from 'react';
 
-import { useFetch } from '../../hooks/useFetch';
-import { useInfiniteScroll } from '../../hooks/useInfiniteScroll';
-import { useLazyLoading } from '../../hooks/useLazyLoading';
+import { useFetch } from './hooks/useFetch';
+import { useInfiniteScroll } from './hooks/useInfiniteScroll';
+import { useLazyLoading } from './hooks/useLazyLoading';
 import { LoadingIndicator } from '../Loading-Indicator/Loading-Indicator';
 import { Photo } from '../Photo/Photo';
 import { LocalStorage } from './enums';
 import * as ImageStyles from './Images.module.scss';
-import { AppContext } from './Provider/Images.context';
+import { AppContext } from '../../App.context';
 import { Photo as PhotoType } from './types';
 
 export const Images: React.FC = () => {

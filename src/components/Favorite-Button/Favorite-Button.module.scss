@@ -1,28 +1,24 @@
-$grey: #ccc;
-$heart: #ff4f8f;
-$white: #fff;
-
 .button-wrapper {
   cursor: pointer;
   margin-top: 30px;
   margin-bottom: 30px;
   display: flex;
   align-items: center;
-  border: 1px solid $grey;
+  border: 1px solid #ccc;
   border-radius: 30px;
   padding-right: 20px;
   & > * {
-    color: $white;
+    color: white;
   }
 }
 
-.like-button {
+.favorite-button {
   cursor: pointer;
   position: relative;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: $grey;
+  background: #ccc;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,7 +27,7 @@ $white: #fff;
   overflow: hidden;
   border: none;
   margin-right: 10px;
-  .like-overlay {
+  .favorite-overlay {
     display: block;
     position: absolute;
     top: 0;
@@ -39,46 +35,46 @@ $white: #fff;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: $heart;
+    background: #ff4f8f;
     transform: scale(0);
     transition: all 0.4s;
     z-index: 0;
   }
   i {
-    &.favorite_border {
+    &.favorite-border {
       background-image: url('../../assets/heart-outline.svg');
       background-repeat: no-repeat;
       width: 24px;
       height: 24px;
     }
-    &.favorite_full {
+    &.favorite-full {
       background-image: url('../../assets/heart-full.svg');
       background-repeat: no-repeat;
       width: 24px;
       height: 24px;
     }
-    &.not-liked {
+    &.not-favorite {
       display: block;
-      color: $white;
+      color: white;
       position: relative;
       z-index: 1;
     }
-    &.is-liked {
+    &.is-favorite {
       display: none;
-      color: $white;
+      color: white;
       position: relative;
       z-index: 1;
     }
   }
   &.is-active {
-    .like-overlay {
+    .favorite-overlay {
       transform: scale(1);
     }
     i {
-      &.not-liked {
+      &.not-favorite {
         display: none;
       }
-      &.is-liked {
+      &.is-favorite {
         display: block;
       }
     }

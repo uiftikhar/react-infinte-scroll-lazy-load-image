@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef } from 'react';
 
-import { ImagesState } from '../components/Images/types';
+import { ImagesState } from '../types';
 
 export const useLazyLoading = (imgSelector: string, items: ImagesState) => {
   const imgObserver = useCallback((node: Element) => {

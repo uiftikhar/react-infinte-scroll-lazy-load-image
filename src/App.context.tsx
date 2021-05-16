@@ -1,9 +1,14 @@
 import React, { createContext, useReducer } from 'react';
-import { LocalStorage } from '../enums';
 
-import { imagesReducer } from '../reducers/images.reducer';
-import { pageReducer } from '../reducers/pager.reducer';
-import { ImagesActions, ImagesState, PagerActions, PagerState } from '../types';
+import { LocalStorage } from './components/Images/enums';
+import { imagesReducer } from './components/Images/reducers/images.reducer';
+import { pageReducer } from './components/Images/reducers/pager.reducer';
+import {
+  ImagesActions,
+  ImagesState,
+  PagerActions,
+  PagerState,
+} from './components/Images/types';
 
 type MainReducerState = {
   images: ImagesState;
