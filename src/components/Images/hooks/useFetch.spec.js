@@ -6,7 +6,7 @@ import {
 } from '@testing-library/react';
 import '../../../__mocks__/intersectionObserverMock';
 
-import App from '../../../App';
+import { App } from '../../../App';
 import { MockPhotos } from '../../../__mocks__/mockPhotos';
 
 describe('App', () => {
