@@ -4,7 +4,7 @@ import * as AppStyles from './App.module.scss';
 import { Images } from './components/Images/Images';
 import { AppProvider } from './App.context';
 
-function App() {
+export const App = () => {
   return (
     <AppProvider>
       <div className={AppStyles.default.container}>
@@ -12,6 +12,4 @@ function App() {
       </div>
     </AppProvider>
   );
-}
-
-export default App;
+};
