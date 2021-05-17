@@ -18,4 +18,4 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-REST API mocking is done using [Mock Service Worker (MSW)](https://mswjs.io/). Check out ./setupTests.js and /**mocks**/server.js to see details on setup and configuration
+REST API mocking is done using [Mock Service Worker (MSW)](https://mswjs.io/). Check out ./setupTests.js and /__mocks__/server.js to see details on setup and configuration
