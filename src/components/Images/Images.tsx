@@ -1,13 +1,13 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import React, { useContext, useRef } from 'react';
 
+import { AppContext } from '../../App.context';
+import { LoadingIndicator } from '../Loading-Indicator/Loading-Indicator';
+import { Photo } from '../Photo/Photo';
 import { useFetch } from './hooks/useFetch';
 import { useInfiniteScroll } from './hooks/useInfiniteScroll';
 import { useLazyLoading } from './hooks/useLazyLoading';
-import { LoadingIndicator } from '../Loading-Indicator/Loading-Indicator';
-import { Photo } from '../Photo/Photo';
-import { LocalStorage } from './enums';
+import { useLocalStorage } from './hooks/useLocalStorage';
 import * as ImageStyles from './Images.module.scss';
-import { AppContext } from '../../App.context';
 import { Photo as PhotoType } from './types';
 
 export const Images: React.FC = () => {
@@ -16,12 +16,7 @@ export const Images: React.FC = () => {
   useFetch({ page: state.pager.page }, dispatch);
   useLazyLoading('.card-img-top', state.images);
   useInfiniteScroll(bottomBoundaryRef, dispatch);
-  useEffect(() => {
-    localStorage.setItem(
-      LocalStorage.Favorites,
-      JSON.stringify(state.images.favorites),
-    );
-  }, [state.images.favorites]);
+  useLocalStorage(state.images.favorites);
   return (
     <>
       <div className={ImageStyles.default['images-container']}>

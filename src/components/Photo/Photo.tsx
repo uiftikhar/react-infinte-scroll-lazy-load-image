@@ -1,10 +1,10 @@
 import React from 'react';
 
+import PlaceHolder from '../../assets/place-holder.jpg';
 import { FavoriteButton } from '../Favorite-Button/Favorite-Button';
 import { ImagesTypes } from '../Images/enums';
 import { ImagesActions } from '../Images/types';
 import * as PhotoStyles from './Photo.module.scss';
-import PlaceHolder from '../../assets/place-holder.jpg';
 
 interface PhotoProps {
   farm: number;
@@ -32,8 +32,9 @@ export const Photo: React.FC<PhotoProps> = ({
   return (
     <div className={PhotoStyles.default.container}>
       <img
+        aria-label="new image"
         className={`${PhotoStyles.default.image} card-img-top`}
-        alt={title}
+        title={title}
         src={PlaceHolder}
         data-src={photoUrl}
       />

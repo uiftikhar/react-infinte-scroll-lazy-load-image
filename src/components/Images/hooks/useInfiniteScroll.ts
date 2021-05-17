@@ -11,7 +11,7 @@ export const useInfiniteScroll = (
     (node: Element) => {
       new IntersectionObserver((entries) => {
         entries.forEach((en) => {
-          if (en.intersectionRatio > 0.5) {
+          if (en.isIntersecting) {
             dispatch({ type: PagerTypes.AdvancePage });
           }
         });

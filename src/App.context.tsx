@@ -23,7 +23,7 @@ const InitialState: MainReducerState = {
       pages: 13,
       perpage: 40,
     },
-    fetching: true,
+    fetching: false,
     favorites: JSON.parse(localStorage.getItem(LocalStorage.Favorites) || '[]'),
   },
   pager: {
